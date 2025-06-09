@@ -175,8 +175,8 @@ publisher {
         modrinth(System.getenv("MODRINTH_API_KEY"))
     }
 
-    curseID.set("")
-    modrinthID.set("")
+    curseID.set("1283372")
+    modrinthID.set("5LllNPr8")
     versionType.set("release")
     changelog.set(file("changelog.md"))
     version.set(project.version.toString())
