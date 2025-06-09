@@ -1,0 +1,7 @@
+// 1.20.1	2025-06-09T21:47:12.2603976	Registrate Provider for createpureglass [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+2e75fc060a53a6301cb89d10ac26fef9986d039e assets/createpureglass/blockstates/pure_glass.json
+906f53e6ef8221a99b33e41d25dda34870da70e6 assets/createpureglass/lang/en_ud.json
+5218294f021bc4a519d8c0b38a4c0be56da0d30f assets/createpureglass/lang/en_us.json
+4c29727e1a83fdd9b00630332ab33160971535e6 assets/createpureglass/models/block/pure_glass.json
+d1ce5f7ea4f773ef3bffdd20f90458d9d0b46197 assets/createpureglass/models/item/pure_glass.json
+99d91ee96d45bde84d288230c85b924387a000ac data/createpureglass/loot_tables/blocks/pure_glass.json

@@ -5,7 +5,7 @@ plugins {
     idea
     `java-library`
     kotlin("jvm") version "2.0.0"
-    id("net.neoforged.moddev.legacyforge") version "2.0.80"
+    id("net.neoforged.moddev.legacyforge") version "2.0.84"
     id("com.hypherionmc.modutils.modpublisher") version "2.1.6"
 }
 
@@ -68,7 +68,13 @@ legacyForge {
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             programArguments.addAll(
-                "--mod", modId, "--all", "--output", file("src/generated/resources/").absolutePath, "--existing", file("src/main/resources/").absolutePath
+                "--mod",
+                modId,
+                "--all",
+                "--output",
+                file("src/generated/resources/").absolutePath,
+                "--existing",
+                file("src/main/resources/").absolutePath
             )
         }
 
@@ -118,7 +124,9 @@ repositories {
         url = uri("https://thedarkcolour.github.io/KotlinForForge/")
         content { includeGroup("thedarkcolour") }
     }
-    maven("https://maven.createmod.net")
+    maven("https://maven.blamejared.com/") // JEI
+    maven("https://maven.createmod.net") // Create, Ponder, Flywheel
+    maven("https://mvn.devos.one/snapshots") // Registrate
     maven("https://modmaven.dev")
 }
 
@@ -126,8 +134,20 @@ dependencies {
     val kotlinForForgeVersion = "4.11.0"
     val mixinExtraVersion = "0.4.1"
     val mixinVersion = "0.8.5"
+    val create = "6.0.4-79"
+    val ponder = "1.0.52"
+    val flywheel = "1.0.2"
+    val registrate = "MC1.20-1.3.3"
 
     implementation("thedarkcolour:kotlinforforge:$kotlinForForgeVersion")
+
+    modImplementation("com.simibubi.create:create-1.20.1:$create:slim") {
+        isTransitive = false
+    }
+    modImplementation("net.createmod.ponder:Ponder-Forge-1.20.1:$ponder")
+    modCompileOnly("dev.engine-room.flywheel:flywheel-forge-api-1.20.1:$flywheel")
+    modRuntimeOnly("dev.engine-room.flywheel:flywheel-forge-1.20.1:$flywheel")
+    modImplementation("com.tterrag.registrate:Registrate:$registrate")
 
     compileOnly(annotationProcessor("io.github.llamalad7:mixinextras-common:$mixinExtraVersion")!!)
     implementation("io.github.llamalad7:mixinextras-forge:$mixinExtraVersion")
