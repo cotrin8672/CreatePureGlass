@@ -1,7 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:light_grey_stained_glass",
-    "createpureglass:light_grey_stained_pure_glass"
-  ]
-}

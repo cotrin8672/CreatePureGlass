@@ -11,9 +11,8 @@ import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
 object CreatePureGlass {
     const val ID = "createpureglass"
 
-    val REGISTRATE: CreateRegistrate = CreateRegistrate.create(ID).apply {
-        defaultCreativeTab(CpgCreativeTabs.CPG_CREATIVE_TAB)
-    }
+    val REGISTRATE: CreateRegistrate = CreateRegistrate.create(ID)
+        .defaultCreativeTab(CpgCreativeTabs.CPG_CREATIVE_TAB.key!!)
 
     fun asResource(path: String): ResourceLocation {
         return ResourceLocation.fromNamespaceAndPath(ID, path)
@@ -21,7 +20,7 @@ object CreatePureGlass {
 
     init {
         REGISTRATE.registerEventListeners(MOD_BUS)
-        CpgCreativeTabs.register(MOD_BUS)
         CpgBlocks.register()
+        CpgCreativeTabs.register(MOD_BUS)
     }
 }

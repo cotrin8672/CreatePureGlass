@@ -211,9 +211,9 @@ tasks.withType<ProcessResources>().configureEach {
     )
 
     inputs.properties(replaceProperties)
-    expand(replaceProperties)
-    from("src/main/templates")
-    into("build/generated/sources/modMetadata")
+    filesMatching(listOf("META-INF/neoforge.mods.toml")) {
+        expand(replaceProperties)
+    }
 }
 
 sourceSets.main.get().resources.srcDir("src/generated/resources")

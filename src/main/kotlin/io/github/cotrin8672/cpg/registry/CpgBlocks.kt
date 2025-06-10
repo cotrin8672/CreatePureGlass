@@ -16,7 +16,7 @@ import java.util.function.Supplier
 
 object CpgBlocks {
     val PURE_GLASS: BlockEntry<ConnectedGlassBlock> = CreatePureGlass.REGISTRATE
-        .block("pure_glass", ::ConnectedGlassBlock)
+        .block<ConnectedGlassBlock>("pure_glass", ::ConnectedGlassBlock)
         .onRegister(CreateRegistrate.connectedTextures { SimpleCTBehaviour(CpgSpriteShifts.PURE_GLASS) })
         .addLayer { Supplier(RenderType::translucent) }
         .initialProperties { Blocks.GLASS }
@@ -37,7 +37,7 @@ object CpgBlocks {
 
     val glassBlocks = DyeColor.entries.map { color ->
         CreatePureGlass.REGISTRATE
-            .block("${color.name}_stained_pure_glass", ::ConnectedGlassBlock)
+            .block<ConnectedGlassBlock>("${color.name.lowercase()}_stained_pure_glass", ::ConnectedGlassBlock)
             .onRegister(CreateRegistrate.connectedTextures { SimpleCTBehaviour(CpgSpriteShifts.MAP[color]) })
             .addLayer { Supplier(RenderType::translucent) }
             .initialProperties { Blocks.GLASS }
