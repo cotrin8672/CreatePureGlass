@@ -29,6 +29,7 @@ object CpgBlocks {
             )
         }
         .properties { it.noOcclusion() }
+        .tag(Tags.Blocks.GLASS_BLOCKS_COLORLESS)
         .item()
         .tag(Tags.Items.GLASS_BLOCKS_COLORLESS)
         .build()
@@ -49,8 +50,9 @@ object CpgBlocks {
                 )
             }
             .properties { it.noOcclusion() }
+            .tag(Tags.Blocks.GLASS_BLOCKS_TINTED)
             .item()
-            .tag(color.itemTag)
+            .tag(color.itemTag, Tags.Items.GLASS_BLOCKS_TINTED)
             .build()
             .register()
     }
