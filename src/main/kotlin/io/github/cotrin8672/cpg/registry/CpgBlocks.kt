@@ -5,7 +5,8 @@ import com.simibubi.create.foundation.block.connected.SimpleCTBehaviour
 import com.simibubi.create.foundation.data.CreateRegistrate
 import com.tterrag.registrate.util.DataIngredient
 import com.tterrag.registrate.util.entry.BlockEntry
-import io.github.cotrin8672.cpg.CreatePureGlass
+import io.github.cotrin8672.cpg.CreatePureGlass.REGISTRATE
+import io.github.cotrin8672.cpg.util.blockTag
 import io.github.cotrin8672.cpg.util.itemTag
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.data.recipes.RecipeCategory
@@ -15,7 +16,11 @@ import net.neoforged.neoforge.common.Tags
 import java.util.function.Supplier
 
 object CpgBlocks {
-    val PURE_GLASS: BlockEntry<ConnectedGlassBlock> = CreatePureGlass.REGISTRATE
+    init {
+        REGISTRATE.setCreativeTab(CpgCreativeTabs.CPG_CREATIVE_TAB)
+    }
+
+    val PURE_GLASS: BlockEntry<ConnectedGlassBlock> = REGISTRATE
         .block<ConnectedGlassBlock>("pure_glass", ::ConnectedGlassBlock)
         .onRegister(CreateRegistrate.connectedTextures { SimpleCTBehaviour(CpgSpriteShifts.PURE_GLASS) })
         .addLayer { Supplier(RenderType::translucent) }
@@ -36,7 +41,7 @@ object CpgBlocks {
         .register()
 
     val glassBlocks = DyeColor.entries.map { color ->
-        CreatePureGlass.REGISTRATE
+        REGISTRATE
             .block<ConnectedGlassBlock>("${color.name.lowercase()}_stained_pure_glass", ::ConnectedGlassBlock)
             .onRegister(CreateRegistrate.connectedTextures { SimpleCTBehaviour(CpgSpriteShifts.MAP[color]) })
             .addLayer { Supplier(RenderType::translucent) }
@@ -50,7 +55,7 @@ object CpgBlocks {
                 )
             }
             .properties { it.noOcclusion() }
-            .tag(Tags.Blocks.GLASS_BLOCKS_TINTED)
+            .tag(color.blockTag, Tags.Blocks.GLASS_BLOCKS_TINTED)
             .item()
             .tag(color.itemTag, Tags.Items.GLASS_BLOCKS_TINTED)
             .build()

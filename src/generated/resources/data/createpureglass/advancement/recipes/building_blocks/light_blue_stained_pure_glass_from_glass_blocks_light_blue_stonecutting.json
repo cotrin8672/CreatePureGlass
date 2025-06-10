@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glass_blocks_light_blue": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:glass_blocks/light_blue"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "createpureglass:light_blue_stained_pure_glass_from_glass_blocks_light_blue_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_glass_blocks_light_blue"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "createpureglass:light_blue_stained_pure_glass_from_glass_blocks_light_blue_stonecutting"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/pink"
+  },
+  "result": {
+    "count": 1,
+    "id": "createpureglass:pink_stained_pure_glass"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/lime"
+  },
+  "result": {
+    "count": 1,
+    "id": "createpureglass:lime_stained_pure_glass"
+  }
+}

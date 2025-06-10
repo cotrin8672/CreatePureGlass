@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/black"
+  },
+  "result": {
+    "count": 1,
+    "id": "createpureglass:black_stained_pure_glass"
+  }
+}

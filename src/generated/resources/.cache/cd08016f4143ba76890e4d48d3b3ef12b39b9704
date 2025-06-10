@@ -1,0 +1,17 @@
+// 1.21.1	2025-06-10T22:40:01.4184143	Tags for minecraft:item mod id createpureglass
+2a32567272238ed76b28c7da31fedd31889c07c3 data/c/tags/item/glass_blocks/black.json
+d260dd805387582aa52786c53f36b552ec0aea1e data/c/tags/item/glass_blocks/blue.json
+45cd59ae20d880ef8ff34f689766622d7e0975d6 data/c/tags/item/glass_blocks/brown.json
+b7818c5a4c19f2b606f9a41314111c959e5c3ea2 data/c/tags/item/glass_blocks/cyan.json
+aa129cda48e9a5143db244d28d7b075a38a66f11 data/c/tags/item/glass_blocks/gray.json
+dbf07060b6aa9b06bf244dea3a9d9a39b59124d1 data/c/tags/item/glass_blocks/green.json
+2634b0978a80b52103308dd0335addd4fb04f631 data/c/tags/item/glass_blocks/light_blue.json
+7d80ed3f72e262dc34eb4702482a6ba9ac7c5fee data/c/tags/item/glass_blocks/light_gray.json
+a688faccb40abc1d18b366d6f82ce0dfe050a99f data/c/tags/item/glass_blocks/lime.json
+43b8e609c8fbfb45371c70d8318c9cc48e02b9da data/c/tags/item/glass_blocks/magenta.json
+c526d8ecf996112ab0ca66791e3455c18db591f5 data/c/tags/item/glass_blocks/orange.json
+66a819b190954562182092dd662ac77f7b2836a0 data/c/tags/item/glass_blocks/pink.json
+ed5c7c4a5f9973a7ea15f29ef8737de704d17009 data/c/tags/item/glass_blocks/purple.json
+5b4f9c07cb38b3bdd53eef5c5847091f59a00145 data/c/tags/item/glass_blocks/red.json
+5b340df6e76e841a030f6334dce88fba74f4d76a data/c/tags/item/glass_blocks/white.json
+d4529279c1239c7824e81f798a445850580ee4ba data/c/tags/item/glass_blocks/yellow.json

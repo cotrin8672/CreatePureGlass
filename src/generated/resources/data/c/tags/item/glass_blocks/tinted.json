@@ -1,0 +1,20 @@
+{
+  "values": [
+    "createpureglass:white_stained_pure_glass",
+    "createpureglass:orange_stained_pure_glass",
+    "createpureglass:magenta_stained_pure_glass",
+    "createpureglass:light_blue_stained_pure_glass",
+    "createpureglass:yellow_stained_pure_glass",
+    "createpureglass:lime_stained_pure_glass",
+    "createpureglass:pink_stained_pure_glass",
+    "createpureglass:gray_stained_pure_glass",
+    "createpureglass:light_gray_stained_pure_glass",
+    "createpureglass:cyan_stained_pure_glass",
+    "createpureglass:purple_stained_pure_glass",
+    "createpureglass:blue_stained_pure_glass",
+    "createpureglass:brown_stained_pure_glass",
+    "createpureglass:green_stained_pure_glass",
+    "createpureglass:red_stained_pure_glass",
+    "createpureglass:black_stained_pure_glass"
+  ]
+}

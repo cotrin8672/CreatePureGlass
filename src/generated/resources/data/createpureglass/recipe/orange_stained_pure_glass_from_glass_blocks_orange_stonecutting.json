@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "c:glass_blocks/orange"
+  },
+  "result": {
+    "count": 1,
+    "id": "createpureglass:orange_stained_pure_glass"
+  }
+}

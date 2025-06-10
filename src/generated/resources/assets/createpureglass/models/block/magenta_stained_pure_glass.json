@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "createpureglass:block/magenta_stained_pure_glass"
+  }
+}
