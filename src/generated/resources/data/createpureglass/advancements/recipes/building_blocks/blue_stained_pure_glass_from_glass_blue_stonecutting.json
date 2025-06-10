@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glass_blue": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:glass/blue"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "createpureglass:blue_stained_pure_glass_from_glass_blue_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_glass_blue",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "createpureglass:blue_stained_pure_glass_from_glass_blue_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

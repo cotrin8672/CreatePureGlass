@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glass_brown": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:glass/brown"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "createpureglass:brown_stained_pure_glass_from_glass_brown_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_glass_brown",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "createpureglass:brown_stained_pure_glass_from_glass_brown_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

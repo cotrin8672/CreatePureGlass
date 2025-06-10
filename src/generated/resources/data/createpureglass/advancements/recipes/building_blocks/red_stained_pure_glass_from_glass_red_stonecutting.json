@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glass_red": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:glass/red"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "createpureglass:red_stained_pure_glass_from_glass_red_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_glass_red",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "createpureglass:red_stained_pure_glass_from_glass_red_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glass_green": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:glass/green"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "createpureglass:green_stained_pure_glass_from_glass_green_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_glass_green",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "createpureglass:green_stained_pure_glass_from_glass_green_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

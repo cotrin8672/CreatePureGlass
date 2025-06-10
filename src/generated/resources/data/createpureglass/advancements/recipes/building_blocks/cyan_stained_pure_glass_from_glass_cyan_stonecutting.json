@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glass_cyan": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:glass/cyan"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "createpureglass:cyan_stained_pure_glass_from_glass_cyan_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_glass_cyan",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "createpureglass:cyan_stained_pure_glass_from_glass_cyan_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glass_magenta": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:glass/magenta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "createpureglass:magenta_stained_pure_glass_from_glass_magenta_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_glass_magenta",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "createpureglass:magenta_stained_pure_glass_from_glass_magenta_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

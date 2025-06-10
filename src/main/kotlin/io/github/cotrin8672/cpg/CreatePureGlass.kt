@@ -12,9 +12,8 @@ import thedarkcolour.kotlinforforge.forge.MOD_BUS
 object CreatePureGlass {
     const val ID = "createpureglass"
 
-    val REGISTRATE: CreateRegistrate = KotlinRegistrate.create(ID).apply {
-        defaultCreativeTab(CpgCreativeTabs.CPG_CREATIVE_TAB)
-    }
+    val REGISTRATE: CreateRegistrate = KotlinRegistrate.create(ID)
+        .defaultCreativeTab(CpgCreativeTabs.CPG_CREATIVE_TAB.key!!)
 
     fun asResource(path: String): ResourceLocation {
         return ResourceLocation(ID, path)
@@ -22,7 +21,7 @@ object CreatePureGlass {
 
     init {
         REGISTRATE.registerEventListeners(MOD_BUS)
-        CpgCreativeTabs.register(MOD_BUS)
         CpgBlocks.register()
+        CpgCreativeTabs.register(MOD_BUS)
     }
 }

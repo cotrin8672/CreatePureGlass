@@ -9,7 +9,7 @@ import net.minecraft.world.item.DyeColor
 
 object CpgSpriteShifts {
     val MAP = DyeColor.entries.associateWith {
-        omni("${it.name}_stained_pure_glass", "${it.name}_stained_pure_glass")
+        omni("${it.name.lowercase()}_stained_pure_glass", "${it.name.lowercase()}_stained_pure_glass")
     }
 
     val PURE_GLASS = omni("pure_glass", "pure_glass")
