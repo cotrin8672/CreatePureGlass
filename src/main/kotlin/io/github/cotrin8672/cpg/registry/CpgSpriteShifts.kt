@@ -5,15 +5,14 @@ import com.simibubi.create.foundation.block.connected.CTSpriteShiftEntry
 import com.simibubi.create.foundation.block.connected.CTSpriteShifter
 import com.simibubi.create.foundation.block.connected.CTType
 import io.github.cotrin8672.cpg.CreatePureGlass.asResource
-import io.github.cotrin8672.cpg.CreatePureGlass.getColors
+import net.minecraft.world.item.DyeColor
 
 object CpgSpriteShifts {
-    val MAP = getColors().associateWith {
-        if (it.isNotBlank())
-            omni("${it}_stained_pure_glass", "${it}_stained_pure_glass")
-        else
-            omni("pure_glass", "pure_glass")
+    val MAP = DyeColor.entries.associateWith {
+        omni("${it.name}_stained_pure_glass", "${it.name}_stained_pure_glass")
     }
+
+    val PURE_GLASS = omni("pure_glass", "pure_glass")
 
     private fun omni(blockTextureName: String, connectedTextureName: String) =
         getCT(AllCTTypes.OMNIDIRECTIONAL, blockTextureName, connectedTextureName)
