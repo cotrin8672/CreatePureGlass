@@ -1,29 +1,16 @@
+# Create: Pure Glass
 
-Installation information
-=======
+**PureGlass** is a mod that adds border-only, fully transparent glass blocks in the style of Create’s decorative
+blocks.  
+You can use these seamless, patternless glass blocks to create clean, modern windows and colored glass builds.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+---
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+## Features
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+- **PureGlass:** Fully transparent glass block with only a white frame.
+- **Colored PureGlass:** PureGlass in all Minecraft stained glass colors.
 
-Mapping Names:
-============
-The MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+## Screenshots
 
-MDG Legacy:
-==========
-This template uses [ModDevGradle Legacy](https://github.com/neoforged/ModDevGradle). Documentation can be found [here](https://github.com/neoforged/ModDevGradle/blob/main/LEGACY.md).
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+![Replace this with a description](https://cdn.modrinth.com/data/cached_images/0936ec6caf397d3da3bcadd148184d45f2366077.png)

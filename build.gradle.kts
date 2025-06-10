@@ -5,7 +5,7 @@ plugins {
     idea
     `java-library`
     kotlin("jvm") version "2.1.0"
-    id("net.neoforged.moddev") version "2.0.80"
+    id("net.neoforged.moddev") version "2.0.84"
     id("com.hypherionmc.modutils.modpublisher") version "2.1.6"
 }
 
@@ -28,7 +28,6 @@ base {
     archivesName = modId
 }
 
-// Mojang ships Java 21 to end users in 1.20.1, so mods should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 kotlin.jvmToolchain(21)
 
@@ -68,7 +67,13 @@ neoForge {
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             programArguments.addAll(
-                "--mod", modId, "--all", "--output", file("src/generated/resources/").absolutePath, "--existing", file("src/main/resources/").absolutePath
+                "--mod",
+                modId,
+                "--all",
+                "--output",
+                file("src/generated/resources/").absolutePath,
+                "--existing",
+                file("src/main/resources/").absolutePath
             )
         }
 
@@ -114,14 +119,34 @@ repositories {
         url = uri("https://thedarkcolour.github.io/KotlinForForge/")
         content { includeGroup("thedarkcolour") }
     }
-    maven("https://maven.createmod.net")
+    maven("https://maven.blamejared.com/") // JEI
+    maven("https://maven.createmod.net") // Create, Ponder, Flywheel
+    maven("https://mvn.devos.one/snapshots") // Registrate
+    maven("https://raw.githubusercontent.com/Fuzss/modresources/main/maven/") // Forge Config API Port
+    maven("https://maven.theillusivec4.top/") // Curios API
     maven("https://modmaven.dev")
 }
 
 dependencies {
     val kotlinForForgeVersion = "5.7.0"
+    val create = "6.0.4-61"
+    val ponder = "1.0.39"
+    val flywheel = "1.0.0-9"
+    val registrate = "MC1.21-1.3.0+62"
+    val curios = "9.2.2"
 
     implementation("thedarkcolour:kotlinforforge-neoforge:$kotlinForForgeVersion")
+
+    implementation("com.simibubi.create:create-$mcVersion:$create:slim") {
+        isTransitive = false
+    }
+    implementation("net.createmod.ponder:Ponder-NeoForge-$mcVersion:$ponder")
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-$mcVersion:$flywheel")
+    runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-$mcVersion:$flywheel")
+    implementation("com.tterrag.registrate:Registrate:$registrate")
+
+    compileOnly("top.theillusivec4.curios:curios-neoforge:$curios+$mcVersion:api")
+    runtimeOnly("top.theillusivec4.curios:curios-neoforge:$curios+$mcVersion")
 }
 
 // Uncomment the lines below if you wish to configure mixin. The mixin file should be named modid.mixins.json.
@@ -145,8 +170,8 @@ publisher {
         modrinth(System.getenv("MODRINTH_API_KEY"))
     }
 
-    curseID.set("")
-    modrinthID.set("")
+    curseID.set("1283372")
+    modrinthID.set("5LllNPr8")
     versionType.set("release")
     changelog.set(file("changelog.md"))
     version.set(project.version.toString())

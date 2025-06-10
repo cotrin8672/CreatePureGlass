@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:lime_stained_glass",
+    "createpureglass:lime_stained_pure_glass"
+  ]
+}

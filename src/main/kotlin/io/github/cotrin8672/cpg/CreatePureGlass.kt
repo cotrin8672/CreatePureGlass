@@ -1,0 +1,27 @@
+package io.github.cotrin8672.cpg
+
+import com.simibubi.create.foundation.data.CreateRegistrate
+import io.github.cotrin8672.cpg.registry.CpgBlocks
+import io.github.cotrin8672.cpg.registry.CpgCreativeTabs
+import net.minecraft.resources.ResourceLocation
+import net.neoforged.fml.common.Mod
+import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
+
+@Mod(CreatePureGlass.ID)
+object CreatePureGlass {
+    const val ID = "createpureglass"
+
+    val REGISTRATE: CreateRegistrate = CreateRegistrate.create(ID).apply {
+        defaultCreativeTab(CpgCreativeTabs.CPG_CREATIVE_TAB)
+    }
+
+    fun asResource(path: String): ResourceLocation {
+        return ResourceLocation.fromNamespaceAndPath(ID, path)
+    }
+
+    init {
+        REGISTRATE.registerEventListeners(MOD_BUS)
+        CpgCreativeTabs.register(MOD_BUS)
+        CpgBlocks.register()
+    }
+}
