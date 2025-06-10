@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "createpureglass:block/cyan_stained_pure_glass"
-  }
-}
